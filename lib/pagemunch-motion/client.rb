@@ -1,15 +1,10 @@
 module Pagemunch
   class Client
-    def boo
-      puts  'boo'
-      puts configuration
-    end
-
     def summary(url, onComplete:block)
       query('summary', forUrl:url, onComplete:block)
     end
 
-    def classify(url, block)
+    def classify(url, onComplete:block)
       query('classify', forUrl:url, onComplete:block)
     end
 
